@@ -18,12 +18,16 @@
         </div>
         <input type="text" autocomplete="off" class="todo-input">
         <ul class="todo-wrap">
-            <li class="todo-item">吃饭</li>
-            <li class="todo-item">睡觉</li>
+            {% for item in data %}
+            <li class="todo-item" data-id={{ item.id }}>{{ item.task }}</li>
+            {% endfor %}
+            <!-- <li class="todo-item">吃饭</li>
+            <li class="todo-item">睡觉</li> -->
         </ul>
     </div>
 </body>
-<script src="js/jquery-1.12.4.min.js"></script>
+<!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/index.js"></script>
 
 </html>
