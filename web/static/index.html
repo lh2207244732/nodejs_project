@@ -12,7 +12,10 @@
         <div class="head">
             <div class="avatar">
                 <img src="images/avatar.png" alt="">
-                <input type="file">
+                <!-- 上传图片必须要在form 表单中需要加 enctype="multipart/form-data" -->
+                <form enctype="multipart/form-data" id="avatar-form">
+                    <input type="file" name="avatar" class="avatar-input">
+                </form>
             </div>
             <h1>ToDoList</h1>
         </div>
